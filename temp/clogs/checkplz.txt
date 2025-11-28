@@ -1,0 +1,8 @@
+[demo@1 regenesis]$ wc -l drr14363.txt 
+26 drr14363.txt
+[demo@1 regenesis]$ wc -c eo14363.txt 
+14768 eo14363.txt
+[demo@1 regenesis]$ calc "1+4+7+6+8"
+"1+4+7+6+8" base 0: result 26
+[demo@1 regenesis]$
+2175362 ../external/UnicodeData.txt
