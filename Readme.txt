@@ -1,5 +1,5 @@
 ﻿/*
-
+https://gist.github.com/oneman/ed9cf9ffa0c73ce3622c23a06f21c728
 #include clue you in ok help maybe think for yourself
 Webster’s Encyclopedia Of Dictionaries New American Edition 1978
 VOA Learning English Word Book 14555286 bytes
@@ -13,6 +13,7 @@ https://raw.githubusercontent.com/oneman/regenesis/refs/heads/main/eo14363.txt
 https://raw.githubusercontent.com/oneman/regenesis/refs/heads/main/USACONST.txt
 https://raw.githubusercontent.com/oneman/regenesis/refs/heads/main/NISTCONST.pdf
 https://www.twitch.tv/computercode
+{https://github.com/oneman/lush https://github.com/oneman/code2 }
 etc, your  choice ;)
 We describe here a computational resynthesis engine via a concrete implementation description in
 that like Motizuki’s IUT is a whole bunch of simple stuff hooked up just certainly wright right rite.
@@ -37,5 +38,5 @@ kind but of course we can imagine constructing and will construct systems that c
 like usual but we make this in a new way using multiradial reconstruction algorithms like that of IUT and in the same
 way confuse everyone to death, so lets just say this is some kind Steam Game we are working on but we can’t afford a
 Steam developer whatever it is yet hahah, click here to save the world, lol ok.
-
+(to get ahead if there was anybody maybe retroactively https://github.com/oneman/code2 https://github.com/oneman/lush
 */
