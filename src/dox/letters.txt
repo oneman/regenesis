@@ -1,0 +1,9 @@
+#number of endpoints
+0 = o             1
+1 = abdegpq       7       # 8 with closed loops ae db gqp
+2 = cijlnrsuvwz  11       # 
+    samedir       3 cnu
+    oppositdir    3 isz
+    angle         5 jlrvw
+3 = hmy           3       # double stroke or lift
+4 = fktx          4       # lift
