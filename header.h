@@ -113,7 +113,7 @@ void lineSDFAABB(float ax, float ay, float bx, float by, float r) {
 /*
 int main() {
     memset(img, 255, sizeof(img));
-    
+
     float cx = WWWW * 0.5f, cy = H * 0.5f;
     for (int j = 0; j < 5; j++) {
         float r1 = fminf(W, H) * (j + 0.5f) * 0.085f;
@@ -276,7 +276,7 @@ int pxrprint(pxr *pr, pxl *px, int w, int h, char *filename) {
   u64 n = pr->nr + pr->nrj;
   char name[4096];
   memset(name, 0, 4096);
-  sprintf(name, "%s.nfo", filename);  
+  sprintf(name, "%s.nfo", filename);
   mkdir(name, S_IRWXU | S_IRWXG | S_IROTH);
   /*
   for (r = 0; r <= n; r++) {

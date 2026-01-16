@@ -10,7 +10,7 @@ void draw_image(PNGImage img) {
   xcb_img = xcb_image_create_native(
         conn,               // XCB connection
         img.width,          // Width
-        img.height,         // Height  
+        img.height,         // Height
         XCB_IMAGE_FORMAT_Z_PIXMAP,  // Format (matches window depth)
         screen->root_depth, // Depth (use screen's depth)
         img.data,           // Pixel data
@@ -32,17 +32,17 @@ int main(int argc, char *argv[]) {
   if (argc != 2) { fprintf(stderr, "Usage: %s <png_file>\n", argv[0]);exit(1);}
   PNGImage img = load_png(argv[1]);
   if (!img.data) { return 1; }
-  xcb_connection_t *xc;  
-  xcb_screen_t *xscr;  
-  xcb_window_t xwin;  
+  xcb_connection_t *xc;
+  xcb_screen_t *xscr;
+  xcb_window_t xwin;
   xcb_image_t *ximg;
   xc = xcb_connect(NULL, NULL);
   if (xcb_connection_has_error(conn)) {
-    fprintf(stderr, "Error: Could not connect to X server\n");  
-    exit(EXIT_FAILURE);  
+    fprintf(stderr, "Error: Could not connect to X server\n");
+    exit(EXIT_FAILURE);
   }
   screen = xcb_setup_roots_iterator(xcb_get_setup(conn)).data;
-  window = xcb_generate_id(conn);  
+  window = xcb_generate_id(conn);
   uint32_t values[4];
   values[0] = screen->white_pixel;
   values[1] = XCB_EVENT_MASK_EXPOSURE | XCB_EVENT_MASK_BUTTON_PRESS | XCB_EVENT_MASK_STRUCTURE_NOTIFY | XCB_EVENT_MASK_BUTTON_RELEASE | XCB_EVENT_MASK_KEY_PRESS | XCB_EVENT_MASK_BUTTON_MOTION;
@@ -68,28 +68,28 @@ int main(int argc, char *argv[]) {
         i++;
         switch (event->response_type & ~0x80) {
             case XCB_MOTION_NOTIFY:
-                            draw_image(img);  
+                            draw_image(img);
                     printf("XCB_MOTION_NOTIFY %d\n", i);
               break;
-            case XCB_EXPOSE:  
-                // Redraw on expose (e.g., window uncovered)  
+            case XCB_EXPOSE:
+                // Redraw on expose (e.g., window uncovered)
                         printf("expose %d\n", i);
-                draw_image(img);  
-                break;  
-            case XCB_CLIENT_MESSAGE:  
-                // Exit on window close (simplified; handle WM_DELETE_WINDOW)  
-                free(img.data);  
-                xcb_disconnect(conn);  
+                draw_image(img);
+                break;
+            case XCB_CLIENT_MESSAGE:
+                // Exit on window close (simplified; handle WM_DELETE_WINDOW)
+                free(img.data);
+                xcb_disconnect(conn);
                 exit(EXIT_SUCCESS);
             default:
               printf("hrm default\n");
               break;
         }
-        free(event);  
+        free(event);
     }
-    xcb_disconnect(conn);  
+    xcb_disconnect(conn);
     printf("cool\n");
-    return 0;  
+    return 0;
 }
 */
 
@@ -434,10 +434,10 @@ int main(int argc, char *argv[]) {
     }
     cairo_surface_destroy(cst);
   }
-  
+
   int DD = 0;//xcb_get_file_descriptor(xc);
-  
-  
+
+
 
 
   struct epoll_event ev;
@@ -458,7 +458,7 @@ int main(int argc, char *argv[]) {
   ev.data.fd = ND;
   R = epoll_ctl(PD, EPOLL_CTL_ADD, ev.data.fd, &ev);
   if (R) EFAIL("epoll_ctl");
-  
+
   ev.data.fd = ID;
   R = epoll_ctl(PD, EPOLL_CTL_ADD, ev.data.fd, &ev);
   if (R) EFAIL("epoll_ctl");
@@ -613,7 +613,6 @@ int main(int argc, char *argv[]) {
       /*R = xcb____Event(DD, &evctx); */
     }
   }
-
   //close(DD);
   T = time(0);
   printf("done\n%s\nOKrad\n", ctime(&T));
